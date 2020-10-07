@@ -2,6 +2,12 @@
 
 ## MOVIE_APP_2020
 
+# 10 07
+>1. prop-types
+>2. render
+>3. setState
+
+
 ## 9 25
 >1. 
 

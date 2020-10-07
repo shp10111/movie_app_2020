@@ -1,31 +1,29 @@
 import React from 'react';
 
-
-function Food(props){
-  console.log(props)
-  return(
-    <h3>I love potato {props.fav}</h3>
-  );
-}
-const foodLink = [
-  {
-    name : '김치',
-  },
-  {
-    name : '피자',
-  },
-  {
-    name : '콜라',
+class App extends React.Component{
+  state = {
+    count = 0,
   }
-]
 
-function App() {
-  return (
-  <div>
-    <h1> hello </h1>
-    </div>
-  );
-
+  add = ()=>{
+    this.setState(current => ({
+      count: current.count + 1,
+    }));
+  };
+  minus = ()=>{
+    this.setState(current => ({
+      count: current.count - 1,
+    }));
+  };
+  render(){
+    return(
+      <div>
+        <h1>the number is : {this.state.count}</h1>
+        <button onClick={this.add}> Add</button>&nbsp;&nbsp;
+        <button onClick={this.minus}> Minus</button>
+      </div>
+    );
+  }
 }
 
 export default App;
